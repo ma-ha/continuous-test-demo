@@ -1,0 +1,15 @@
+{
+  "name": "continuous-test",
+  "version": "0.0.4",
+  "license": "MIT",
+  "description": "Run continuous test automation in production",
+  "author": "MH",
+  "main": "testApp.js",
+  "scripts": {
+    "start": "node testApp.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mocha": "^6.0.2"
+  }
+}

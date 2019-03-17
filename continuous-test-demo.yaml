@@ -1,0 +1,21 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: continuous-test-demo
+spec:
+  selector:
+    matchLabels:
+      app: continuous-test-demo
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: continuous-test-demo
+    spec:
+      containers:
+      - name: continuous-test-demo
+        image: <myregistry>.azurecr.io/continuous-test-demo:0.4
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+        - name: myregistry
